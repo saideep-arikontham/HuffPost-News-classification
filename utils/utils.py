@@ -99,7 +99,6 @@ def get_embedding_df(df, embedding_dim, model):
     embeddings_df = pd.DataFrame(embeddings.tolist(), index=df.index, columns=cols)
     df = pd.concat([df, embeddings_df], axis=1)
 
-    print('- Embeddings are created.')
     return (df.copy(), cols)
 
 
